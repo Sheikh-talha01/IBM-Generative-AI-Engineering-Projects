@@ -1,6 +1,22 @@
+---
+title: Image Captioning with GenAI
+emoji: 🖼️
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+sdk_version: 5.23.2
+app_file: app.py
+pinned: false
+---
+
 # Image Captioning with GenAI
 
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/talhasheikh/Imgae-Captioning-App)
+
 This project uses the Salesforce BLIP (Bootstrapping Language-Image Pre-training) model to generate descriptive captions for images. It features a user-friendly web interface built with Gradio and can be easily containerized using Docker.
+
+## 🚀 Live Demo
+You can try the live application here: [Image Captioning App on Hugging Face Spaces](https://huggingface.co/spaces/talhasheikh/Imgae-Captioning-App)
 
 ## Features
 - **AI-Powered Captioning**: Uses `Salesforce/blip-image-captioning-base`.
