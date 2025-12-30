@@ -8,19 +8,13 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 
 # made a   function
 def generate_caption(image):
-    inputs = processor(images=image, return_tensors="pt")
-    out = model.generate(**inputs)
-    caption = processor.decode(out[0], skip_special_tokens=True)
-    return caption
+    img_input =  Image.fromarray(image)
+    print(img_input)
+    return ""
 
-iface = gr.Interface(
-    fn=generate_caption,
-    inputs=gr.Image(type="pil"),
-    outputs="text",
-    title="Image Captioning with BLIP",
-    description="Upload an image to generate a caption."
-)
 
-if __name__ == "__main__":
-    iface.launch()
+demo = gr.Interface(fn=generate_caption,
+                    inputs=[gr.Image(label = 'Image')],
+                    outputs=[gr.Text(label = 'Caption')])
 
+demo.launch()
